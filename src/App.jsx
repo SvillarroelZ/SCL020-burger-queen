@@ -1,5 +1,8 @@
 import {Routes, Route} from 'react-router-dom'
 
+import { useContext } from 'react';
+import { UserContext } from './context/UserProvider';
+
 import Home from './routes/Home'
 import Waitress from './routes/waitress';
 import WaitressNight from './routes/WaitressNight';
@@ -9,20 +12,48 @@ import Tables from './routes/tables';
 import Logout from './routes/logout';
 
 import Navbar from './components/Navbar';
+import RequireAuth from './components/RequireAuth';
 
 const App = () => {
+
+  const {user} = useContext(UserContext)
   return (
     <>
         <Navbar />
         <h1>APP</h1>
+
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/chef' element={<Chef />}></Route>
-          <Route path='/waitress' element={<Waitress />}></Route>
-          <Route path='/waitress-night' element={<WaitressNight />}></Route>
-          <Route path='/panic' element={<Panic />}></Route>
-          <Route path='/tables' element={<Tables />}></Route>
-          <Route path='/logout' element={<Logout />}></Route>
+          <Route path='/chef' element={
+            <RequireAuth>
+              <Chef />
+            </RequireAuth>
+          }/>
+          <Route path='/waitress' element={
+            <RequireAuth>
+              <Waitress />
+            </RequireAuth>
+          }/>
+          <Route path='/waitress-night' element={
+            <RequireAuth>
+              <WaitressNight />
+            </RequireAuth>
+          }/>
+          <Route path='/panic' element={
+            <RequireAuth>
+              <Panic />
+            </RequireAuth>
+          }/>
+          <Route path='/tables' element={
+            <RequireAuth>
+              <Tables />
+            </RequireAuth>  
+          }/>
+          <Route path='/logout' element={
+          <RequireAuth>
+            <Logout />
+          </RequireAuth>
+          }/>
         </Routes>
     </>
   );
