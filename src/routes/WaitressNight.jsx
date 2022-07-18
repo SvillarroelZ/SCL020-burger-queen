@@ -1,7 +1,7 @@
 const WaitressNight = () => {
-    return(
+  return (
         <>
-            <form> 
+            <form>
                 <input type='range' name='' id='' min='0' max='5'/>
                 <input type='radio' />
             </form>
@@ -21,7 +21,7 @@ const WaitressNight = () => {
                 </div>
             </div>
         </>
-    )
+  )
 }
 
 export default WaitressNight

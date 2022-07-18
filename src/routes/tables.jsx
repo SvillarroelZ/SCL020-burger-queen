@@ -1,5 +1,5 @@
 const Tables = () => {
-    return(
+  return (
         <>
             <h1>Tables</h1>
             <p>aqui irian las mesas</p>
@@ -7,7 +7,7 @@ const Tables = () => {
             <p>mesa2
             </p>
         </>
-    )
+  )
 }
 
 export default Tables

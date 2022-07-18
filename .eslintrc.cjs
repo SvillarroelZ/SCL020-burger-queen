@@ -8,6 +8,7 @@ module.exports = {
       version: 'detect',
     },
   },
+
   extends: [
     'plugin:react/recommended',
     'standard',

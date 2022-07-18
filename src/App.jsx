@@ -1,22 +1,22 @@
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
-import { useContext } from 'react';
-import { UserContext } from './context/UserProvider';
+import { useContext } from 'react'
+import { UserContext } from './context/UserProvider'
 
 import Home from './routes/Home'
-import Waitress from './routes/Waitress';
-import WaitressNight from './routes/WaitressNight';
-import Chef from './routes/Chef';
-import Panic from './routes/panic';
-import Tables from './routes/tables';
-import Logout from './routes/logout';
+import Waitress from './routes/Waitress'
+import WaitressNight from './routes/WaitressNight'
+import Chef from './routes/Chef'
+import Panic from './routes/panic'
+import Tables from './routes/tables'
+import Logout from './routes/logout'
 
-import Navbar from './components/Navbar';
-import RequireAuth from './components/RequireAuth';
+import Navbar from './components/Navbar'
+import RequireAuth from './components/RequireAuth'
 
 const App = () => {
-  const {user} = useContext(UserContext);
-  if(user === false){
+  const { user } = useContext(UserContext)
+  if (user === false) {
     return <p>Loading...</p>
   }
   return (
@@ -47,7 +47,7 @@ const App = () => {
           <Route path='/tables' element={
             <RequireAuth>
               <Tables />
-            </RequireAuth>  
+            </RequireAuth>
           }/>
           <Route path='/logout' element={
           <RequireAuth>
@@ -56,7 +56,7 @@ const App = () => {
           }/>
         </Routes>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
