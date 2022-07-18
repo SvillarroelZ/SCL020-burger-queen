@@ -6,7 +6,7 @@ const Chef = () => {
     return(
         <>
             <div>
-                <H3>Chef: Papitas</H3>
+                <h3>Chef: Papitas</h3>
             </div>
             <div>
                 <div className='command-chef-1'>
@@ -19,6 +19,7 @@ const Chef = () => {
                         <p> Mesero: Pepito</p>
                     </div>
                     <button>Aceptar Pedido</button>
+                    
                     <button>Pedido Terminado</button>
                 </div>
                 <div className='command-chef-2'>

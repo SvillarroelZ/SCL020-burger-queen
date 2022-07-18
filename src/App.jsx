@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { UserContext } from './context/UserProvider';
 
 import Home from './routes/Home'
-import Waitress from './routes/waitress';
+import Waitress from './routes/Waitress';
 import WaitressNight from './routes/WaitressNight';
 import Chef from './routes/Chef';
 import Panic from './routes/panic';
@@ -14,14 +14,15 @@ import Logout from './routes/logout';
 import Navbar from './components/Navbar';
 import RequireAuth from './components/RequireAuth';
 
+
+
+
 const App = () => {
 
   const {user} = useContext(UserContext)
   return (
     <>
         <Navbar />
-        <h1>APP</h1>
-
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/chef' element={
