@@ -1,8 +1,8 @@
-import Navbar from "../components/Navbar"
+//import Navbar from "../components/Navbar"
 import { useState, useContext } from "react"
-import {savePersonName} from '../firebase/firestore'
+//import {savePersonName, } from '../firebase/firestore'
 import { UserContext } from '../context/UserProvider'
-
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
     
@@ -10,16 +10,17 @@ const Home = () => {
     const [password, setPassword] = useState('123123')
     
     const {loginUser} = useContext(UserContext);
-    //const navegate = useNavigate()
+    const navegate = useNavigate();
 
     const handleSubmit = async(e) => {
         e.preventDefault()
         console.log('procesando form:', email, password);
         try{
-            await loginUser(email, password)
-            console.log('user loged in')
+            await loginUser(email, password);
+            console.log('user is loged in');
+            navegate('/chef')
         } catch (error) {
-            console.log(error.code)
+            console.log(error.code);
             
         }
     };
