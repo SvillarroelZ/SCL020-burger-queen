@@ -1,0 +1,6 @@
+.prettierrc
+firebase.json
+firestore.indexes.json
+README.md
+src/firebase/config.js
+vite.config.js
