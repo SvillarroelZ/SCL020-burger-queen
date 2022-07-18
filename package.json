@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "format": "prettier —write .",
     "lint": "eslint --fix . --ext .js,.jsx"
+    
   },
   "dependencies": {
     "react": "^18.2.0",
