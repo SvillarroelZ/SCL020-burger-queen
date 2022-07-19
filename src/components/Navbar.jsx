@@ -4,7 +4,7 @@ import { UserContext } from '../context/UserProvider';
 
 
 const Navbar = () => {
-  const navegate = useNavigate()
+  //const navegate = useNavigate()
   const { user, signOutUser } = useContext(UserContext)
   const handleClickLogout = async () => {
     try {
@@ -21,7 +21,18 @@ const Navbar = () => {
   return (
         <div>
 
-            {user
+            {user &&
+              <>         
+                <button onClick={handleClickLogout}>Logout</button>
+                <button onClick={handlePanicBtn}>Panic</button>
+                <NavLink to='/tables'>Tables</NavLink>
+              </> 
+            }
+
+
+
+
+            {/* {user
               ? (
                 <>
                     <button onClick={handleClickLogout}>Logout</button>
@@ -33,7 +44,7 @@ const Navbar = () => {
                 <>
 
                 </>
-                )}
+                )} */}
 
         </div>
   )
