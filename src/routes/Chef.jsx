@@ -1,9 +1,9 @@
-import {useContext} from 'react'
+import { useContext } from 'react'
 import { UserContext } from '../context/UserProvider'
 
 const Chef = () => {
-    const {user, setUser} = useContext(UserContext)
-    return(
+  const { user, setUser } = useContext(UserContext)
+  return (
         <>
             <div>
                 <h3>Chef: Papitas</h3>
@@ -19,7 +19,7 @@ const Chef = () => {
                         <p> Mesero: Pepito</p>
                     </div>
                     <button>Aceptar Pedido</button>
-                    
+
                     <button>Pedido Terminado</button>
                 </div>
                 <div className='command-chef-2'>
@@ -48,11 +48,10 @@ const Chef = () => {
                 </div>
             </div>
         </>
-    )
+  )
 }
 
 export default Chef
-
 
 // <h1>Chef</h1>
 // <h2>{user ? 'Online' : 'Offline'}</h2>
