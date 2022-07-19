@@ -1,0 +1,92 @@
+{
+    "menuOptions":[{
+                    "id":"01",
+                    "name":"Cafe Latte",
+                    "description":"Exquisito cafe de grano recien molido, puedes mesclarlo con la leche vegetal de tu preferencia",
+                    "type":"drink",
+                    "price": 3500,
+                    "img":"",
+                    "menu":"day"
+                },
+                {
+                    "id":"02",
+                    "name":"Té helado",
+                    "description":"Fresco te helado puedes elegir té verde, blanco o negro",
+                    "type":"drink",
+                    "price": 2500,
+                    "img":"",
+                    "menu":"day"
+                },
+                {
+                    "id":"03",
+                    "name":"Sandwich vegetariano",
+                    "description":"Crujiente pan baguette",
+                    "type":"food",
+                    "price": 4000,
+                    "img":"",
+                    "menu":"day"
+                },
+                {
+                    "id":"04",
+                    "name":"Ensalada",
+                    "description":"Delicioso surtido de hojas verdes, tomates cherry, humus y frutos secos",
+                    "type":"food",
+                    "price": 4800,
+                    "img":"",
+                    "menu":"day"
+                },
+                {
+                    "id":"05",
+                    "name":"Torta Bruce",
+                    "description":"Deliciosa torta vegana de chocolate bitter con ganache de chocolate y chips de chocolate",
+                    "type":"dessert",
+                    "price": 3800,
+                    "img":"",
+                    "menu":"day"
+                },
+                {
+                    "id":"06",
+                    "name":"Churros",
+                    "description":"Deliciosos churros acompañados con salsa a eleccion",
+                    "type":"dessert",
+                    "price": 2500,
+                    "img":"",
+                    "menu":"day"
+                },
+                {
+                    "id":"07",
+                    "name":"Cafe americano",
+                    "description":"Delicioso cafe de grano recien molido",
+                    "type":"drink",
+                    "price": 2500,
+                    "img":"",
+                    "menu":"night"
+                },
+                {
+                    "id":"08",
+                    "name":"Infusion de yerbas",
+                    "description":"Puedes elegir entre nuestra gran variedad de tes e infuciones",
+                    "type":"drink",
+                    "price": 1500,
+                    "img":"",
+                    "menu":"night"
+                },
+                {
+                    "id":"09",
+                    "name":"Sandwich de miga",
+                    "description":"Sandwich relleno de crema de palmitos y not pollo de seitan",
+                    "type":"food",
+                    "price": 2500,
+                    "img":"",
+                    "menu":"night"
+                },
+                {
+                    "id":"08",
+                    "name":"Donut variedades",
+                    "description":"Elije entre oreo, dulce de leche, frambuesa, chocolate",
+                    "type":"food",
+                    "price": 1800,
+                    "img":"",
+                    "menu":"night"
+                }
+]}

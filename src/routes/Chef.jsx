@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { UserContext } from '../context/UserProvider'
+import { MenuContext } from '../components/waitress/Pedido'
 
 const Chef = () => {
   const { user, setUser } = useContext(UserContext)
