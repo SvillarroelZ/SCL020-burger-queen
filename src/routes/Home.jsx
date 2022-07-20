@@ -46,8 +46,7 @@ const Home = () => {
 	};
 
 	return (
-		<>
-			<h1 className='m-6'>Register</h1>
+		<div className='bg-purple-300'>
 			<form onSubmit={handleSubmit}>
 				<input
 					type='email'
@@ -65,7 +64,7 @@ const Home = () => {
 				/>
 				<button type='submit'>Login</button>
 			</form>
-		</>
+		</div>
 	);
 };
 
