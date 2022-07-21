@@ -2,73 +2,73 @@
     "menuOptions":[{
                     "id":"01",
                     "name":"Cafe Latte",
-                    "description":"Exquisito cafe de grano recien molido, puedes mesclarlo con la leche vegetal de tu preferencia",
+                    "description":"Exquisito cafe de grano recién molido, puedes mezclarlo con la leche vegetal de tu preferencia",
                     "type":"drink",
                     "price": 3500,
-                    "img":"",
+                    "img":"https://cdn-icons-png.flaticon.com/512/4062/4062454.png",
                     "menu":"day"
                 },
                 {
                     "id":"02",
-                    "name":"Té helado",
-                    "description":"Fresco te helado puedes elegir té verde, blanco o negro",
+                    "name":"Jugo natural",
+                    "description":"Pregunta por las frutas disponibles",
                     "type":"drink",
                     "price": 2500,
-                    "img":"",
+                    "img":"https://cdn-icons-png.flaticon.com/512/4062/4062496.png",
                     "menu":"day"
                 },
                 {
                     "id":"03",
-                    "name":"Sandwich vegetariano",
-                    "description":"Crujiente pan baguette",
+                    "name":"Helado soft",
+                    "description":"Helado soft de leche de almendras, pregunta por los sabores disponibles",
                     "type":"food",
-                    "price": 4000,
-                    "img":"",
+                    "price": 1400,
+                    "img":"https://cdn-icons-png.flaticon.com/512/4062/4062559.png",
                     "menu":"day"
                 },
                 {
                     "id":"04",
-                    "name":"Ensalada",
-                    "description":"Delicioso surtido de hojas verdes, tomates cherry, humus y frutos secos",
+                    "name":"Ramen vegetariano",
+                    "description":"Delicioso caldo de miso con fideos de soba huevo cocido marinado en nuestra famosa salsa secreta",
                     "type":"food",
                     "price": 4800,
-                    "img":"",
+                    "img":"https://cdn-icons-png.flaticon.com/512/4062/4062587.png",
                     "menu":"day"
                 },
                 {
                     "id":"05",
-                    "name":"Torta Bruce",
-                    "description":"Deliciosa torta vegana de chocolate bitter con ganache de chocolate y chips de chocolate",
-                    "type":"dessert",
+                    "name":"Burrito de falafel",
+                    "description":"Relleno de lechuga tomates cherry falafel y nuestra salsa secreta",
+                    "type":"food",
                     "price": 3800,
-                    "img":"",
+                    "img":"https://cdn-icons-png.flaticon.com/512/4062/4062424.png",
                     "menu":"day"
                 },
                 {
                     "id":"06",
-                    "name":"Churros",
-                    "description":"Deliciosos churros acompañados con salsa a eleccion",
+                    "name":"Fluffy pancakes",
+                    "description":"Esponjosos panqueques acompañados de salsa a elección",
                     "type":"dessert",
                     "price": 2500,
-                    "img":"",
+                    "img":"https://cdn-icons-png.flaticon.com/512/4062/4062595.png",
                     "menu":"day"
                 },
                 {
                     "id":"07",
-                    "name":"Cafe americano",
-                    "description":"Delicioso cafe de grano recien molido",
+                    "name":"Kat milkshake",
+                    "description":"Puedes elegir entre oreo, rainbow o dulce de leche",
                     "type":"drink",
                     "price": 2500,
-                    "img":"",
+                    "img":"https://cdn-icons-png.flaticon.com/512/4062/4062569.png",
                     "menu":"night"
                 },
                 {
                     "id":"08",
-                    "name":"Infusion de yerbas",
-                    "description":"Puedes elegir entre nuestra gran variedad de tes e infuciones",
-                    "type":"drink",
+                    "name":"Cupcake",
+                    "description":"Pregunta por los sabores del dia! <3",
+                    "type":"dessert",
                     "price": 1500,
-                    "img":"",
+                    "img":"https://cdn-icons-png.flaticon.com/512/4062/4062467.png",
                     "menu":"night"
                 },
                 {
@@ -77,16 +77,16 @@
                     "description":"Sandwich relleno de crema de palmitos y not pollo de seitan",
                     "type":"food",
                     "price": 2500,
-                    "img":"",
+                    "img":"https://cdn-icons-png.flaticon.com/512/4062/4062606.png",
                     "menu":"night"
                 },
                 {
-                    "id":"08",
+                    "id":"10",
                     "name":"Donut variedades",
                     "description":"Elije entre oreo, dulce de leche, frambuesa, chocolate",
-                    "type":"food",
+                    "type":"dessert",
                     "price": 1800,
-                    "img":"",
+                    "img":"https://cdn-icons-png.flaticon.com/512/4062/4062485.png",
                     "menu":"night"
                 }
 ]}

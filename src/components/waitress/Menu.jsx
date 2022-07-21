@@ -33,13 +33,13 @@ const Menu = ({ data }) => {
 						<button className='h-9 w-20 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white ' onClick={() => menuType('dessert')}>Postre</button>
 					</ul>
 				</div>
-				<div className='w-64 h-3/6' >
-					<div className='menuItem'>
-							{Menu.map((item, index) => (
-								<div key={index} className='itemCont flex flex-row bg-blue-400 rounded-lg'>
-									<img src={item.img} alt='' />
-									<p className='title-items'>{item.name}</p>
-									<h2 className='price'>${item.price}</h2>
+				<div className='w-64 h-3/6 gap-1.5 ' >
+					<div className='grid grid-cols-3'>
+							{Menu.map((item) => (
+								<div key={item.id} className='itemCont flex flex-col justify-center items-center bg-white rounded-lg w-20 h-28 gap-1.5 text-center'>
+									<img src={item.img} alt='menu' className='w-12 h-12'/>
+									<p className='title-items text-xs'>{item.name}</p>
+									<h2 className='price text-xs'>${item.price}</h2>
 									{/* <button
 										onClick={() => context.addProduct(item)}
 										className='btn-add'
