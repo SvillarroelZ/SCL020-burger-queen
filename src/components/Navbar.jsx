@@ -1,6 +1,7 @@
 import {NavLink, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../context/UserProvider';
+import Swal from 'sweetalert2';
 
 
 const Navbar = () => {
@@ -15,7 +16,7 @@ const Navbar = () => {
   }
 
   const handlePanicBtn = () => {
-    alert('Alerta de emergencia')
+    Swal.fire('Alerta de emergencia')
   }
 
   return (
@@ -25,7 +26,7 @@ const Navbar = () => {
               <>         
                 <button onClick={handleClickLogout} className='h-9 w-28 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white '>Logout</button>
                 <button onClick={handlePanicBtn} className='h-9 w-28 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white'>Panic</button>
-                <NavLink to='/tables' className='h-9 w-28 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white'>Tables</NavLink>
+                <NavLink to='/tables' className='h-9 w-28 bg-purple-400 m-0 rounded-lg border-none shadow-xl border-white'>Tables</NavLink>
               </> 
             }
 

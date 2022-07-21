@@ -4,28 +4,33 @@ import { MenuContext } from './Pedido';
 
 const Menu = ({ data }) => {
 
-	const context = useContext(MenuContext);
+	useContext(MenuContext);
 	const [Menu, setMenu] = useState([]);
 
-	const menuHrs = (options) => {
-		const dayOp = data.filter((elem) => elem.menu === options);
-		console.log('si funciona');
-		setMenu(dayOp);
+	const menuType = (options) => {
+		const drinkType = data.filter((elem) => elem.type === options);
+		const foodType = data.filter((elem) => elem.type === options);
+		const  dessertType = data.filter((elem) => elem.type === options);
 
-		const nightOp = data.filter((elem) => elem.menu === options);
-		setMenu(nightOp);
-
-		options === 'day' ? dayOp : nightOp;
+			if(drinkType === 'drink'){
+				setMenu(drinkType)
+			}else if (foodType === 'food'){
+				setMenu(foodType)
+			}else{
+				setMenu(dessertType)
+			}
 	};
+
 
 	return (
 		<div className='flex flex-col justify-center items-center bg-white-300'>
 			<div className='flex flex-col'>
 				<div className='flex flex-row' >
 					{/* <input id="displace" type="range" value="10" min="0" max="5" onInput="this.nextElementSibling.value = this.value"/> */}
-					<ul className='flex items-center w-24'>
-						<button className='rounded-l-2xl bg-indigo-500' onClick={() => menuHrs('day')}>&#x1F31E;</button>
-						<button className='rounded-r-2xl bg-yellow-400' onClick={() => menuHrs('night')}>&#127769;</button>
+					<ul className='flex items-center w-64 gap-1.5'>
+						<button className='h-9 w-20 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white ' onClick={() => menuType('drink')}>Bebidas</button>
+						<button className='h-9 w-20 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white ' onClick={() => menuType('food')}>Comida</button>
+						<button className='h-9 w-20 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white ' onClick={() => menuType('dessert')}>Postre</button>
 					</ul>
 				</div>
 				<div className='w-64 h-3/6' >

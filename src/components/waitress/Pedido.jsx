@@ -3,7 +3,10 @@ import menudataJson from '../../menudata.json';
 
 export const MenuContext = createContext(menudataJson);
 
-export const Pedido = () => {
+const Pedido = () => {
+
+
+
 	return (
 		<div className='flex flex-col justify-between items-center w-64 h-3/6 bg-indigo-400 bg-opacity-50 rounded-lg'>
 			<div className='my-10'>
