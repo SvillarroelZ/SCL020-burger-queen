@@ -19,13 +19,13 @@ const Navbar = () => {
   }
 
   return (
-        <div>
+        <div className='flex justify-center gap-20 shadow-xl text-white text-center'>
 
             {user &&
               <>         
-                <button onClick={handleClickLogout}>Logout</button>
-                <button onClick={handlePanicBtn}>Panic</button>
-                <NavLink to='/tables'>Tables</NavLink>
+                <button onClick={handleClickLogout} className='h-9 w-28 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white '>Logout</button>
+                <button onClick={handlePanicBtn} className='h-9 w-28 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white'>Panic</button>
+                <NavLink to='/tables' className='h-9 w-28 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white'>Tables</NavLink>
               </> 
             }
 

@@ -46,24 +46,31 @@ const Home = () => {
 	};
 
 	return (
-		<div className='bg-purple-300'>
-			<form onSubmit={handleSubmit}>
-				<input
-					type='email'
-					placeholder='email'
-					required='on'
-					value={email}
-					onChange={(e) => setEmail(e.target.value)}
-				/>
-				<input
-					type='password'
-					placeholder='password'
-					required='on'
-					value={password}
-					onChange={(e) => setPassword(e.target.value)}
-				/>
-				<button type='submit'>Login</button>
-			</form>
+		<div className='flex flex-col justify-center items-center w-screen h-screen bg-purple-300'>
+			<div className= 'flex justify-center items-center h-3/4 w-2/4 border-8 border-double border-white'>
+				<form onSubmit={handleSubmit} className='flex flex-col items-center'>
+					<img src="src\components\images\logo-title.png" alt="logo-katQueen" className='h-60 mb-6'  />
+					<input 
+						className='my-1 rounded-lg border-none shadow-xl text-gray-400 text-center'
+						type='email'
+						placeholder='email'
+						required='on'
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+						
+					/>
+					<input 
+						className='my-1 rounded-lg border-none shadow-xl text-gray-400 text-center'
+						type='password'
+						placeholder='password'
+						required='on'
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+					/>
+					
+					<button type='submit'className='h-9 w-28 bg-white my-1 rounded-lg border-none shadow-xl' >Login</button>
+				</form>
+			</div>
 		</div>
 	);
 };

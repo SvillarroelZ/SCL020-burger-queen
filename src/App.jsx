@@ -22,13 +22,15 @@ const App = () => {
 	}
 	return (
 		<>
-			<Navbar />
+			
 			<Routes>
 				<Route path='/' element={<Home />}></Route>
 				<Route
+
 					path='/chef'
 					element={
 						<RequireAuth>
+							<Navbar />
 							<Chef />
 						</RequireAuth>
 					}
@@ -37,6 +39,7 @@ const App = () => {
 					path='/waitress'
 					element={
 						<RequireAuth>
+							<Navbar />
 							<Waitress />
 						</RequireAuth>
 					}
@@ -45,6 +48,7 @@ const App = () => {
 					path='/waitress-night'
 					element={
 						<RequireAuth>
+							<Navbar />
 							<WaitressNight />
 						</RequireAuth>
 					}
@@ -61,6 +65,7 @@ const App = () => {
 					path='/tables'
 					element={
 						<RequireAuth>
+							<Navbar />
 							<Tables />
 						</RequireAuth>
 					}
