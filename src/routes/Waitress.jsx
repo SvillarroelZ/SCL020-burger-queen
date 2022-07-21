@@ -10,7 +10,7 @@ const Waitress = () => {
 	return (
 		<main className='flex justify-around items-start w-screen h-screen'>
 			<div className='flex justify-around items-center w-2/5'>
-				<div>
+				<div className='flex justify-center items-center flex-col'>
 					<Menu data={data}/>
 					<Sizes/>
 				</div>
