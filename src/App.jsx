@@ -12,7 +12,7 @@ import Tables from './routes/tables';
 import Logout from './routes/logout';
 
 import Navbar from './components/Navbar';
-import RequireAuth from './components/RequireAuth';
+import ProtectedRoutes from './components/RequireAuth';
 // import Menu from './components/waitress/Menu';
 
 const App = () => {
@@ -22,60 +22,58 @@ const App = () => {
 	}
 	return (
 		<>
-			
 			<Routes>
 				<Route path='/' element={<Home />}></Route>
 				<Route
-
 					path='/chef'
 					element={
-						<RequireAuth>
+						<ProtectedRoutes>
 							<Navbar />
 							<Chef />
-						</RequireAuth>
+						</ProtectedRoutes>
 					}
 				/>
 				<Route
 					path='/waitress'
 					element={
-						<RequireAuth>
+						<ProtectedRoutes>
 							<Navbar />
 							<Waitress />
-						</RequireAuth>
+						</ProtectedRoutes>
 					}
 				/>
 				<Route
 					path='/waitress-night'
 					element={
-						<RequireAuth>
+						<ProtectedRoutes>
 							<Navbar />
 							<WaitressNight />
-						</RequireAuth>
+						</ProtectedRoutes>
 					}
 				/>
 				<Route
 					path='/panic'
 					element={
-						<RequireAuth>
+						<ProtectedRoutes>
 							<Panic />
-						</RequireAuth>
+						</ProtectedRoutes>
 					}
 				/>
 				<Route
 					path='/tables'
 					element={
-						<RequireAuth>
+						<ProtectedRoutes>
 							<Navbar />
 							<Tables />
-						</RequireAuth>
+						</ProtectedRoutes>
 					}
 				/>
 				<Route
 					path='/logout'
 					element={
-						<RequireAuth>
+						<ProtectedRoutes>
 							<Logout />
-						</RequireAuth>
+						</ProtectedRoutes>
 					}
 				/>
 			</Routes>

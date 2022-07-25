@@ -1,15 +1,12 @@
-import { useContext } from 'react'
-import { UserContext } from '../context/UserProvider'
-import { Navigate } from 'react-router-dom'
+//import { useContext } from 'react'
+//import { UserContext } from '../context/UserProvider'
+import { Navigate } from 'react-router-dom';
 
-const RequireAuth = ({ children }) => {
-  const { user } = useContext(UserContext)
+const ProtectedRoutes = ({ children }) => {
+	const token = localStorage.getItem('token');
+	console.log(token);
+	if (!token) return <Navigate to='/' />;
+	return <>{children}</>;
+};
 
-  if (!user) {
-    return <Navigate to='/' />
-  }
-
-  return children
-}
-
-export default RequireAuth
+export default ProtectedRoutes;
