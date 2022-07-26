@@ -30,6 +30,10 @@ const Navbar = () => {
 		Swal.fire('Alerta de emergencia');
 	};
 
+	const tables = () => {
+		navegate('/tables')
+	}
+
 	return (
 		<div className='flex justify-center gap-20 shadow-xl text-white text-center'>
 			{user && (
@@ -46,12 +50,12 @@ const Navbar = () => {
 					>
 						Panic
 					</button>
-					<NavLink
-						to='/tables'
-						className='h-9 w-28 bg-purple-400 m-0 rounded-lg border-none shadow-xl border-white'
+					<button
+						onClick={tables}
+						className='h-9 w-28 bg-purple-400 m-1 rounded-lg border-none shadow-xl border-white'
 					>
 						Tables
-					</NavLink>
+					</button>
 				</>
 			)}
 		</div>
