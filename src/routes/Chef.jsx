@@ -1,5 +1,5 @@
 import { UserContext } from '../context/UserProvider';
-import { MenuContext } from '../components/waitress/Pedido';
+// import { MenuContext } from '../components/waitress/Pedido';
 import Cronometro from '../components/Chef/Cronometro';
 import Comanda from '../components/Chef/Comanda';
 import Botones from '../components/Chef/Botones';
