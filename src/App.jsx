@@ -13,7 +13,7 @@ import Logout from './routes/logout';
 
 import Navbar from './components/Navbar';
 import ProtectedRoutes from './components/RequireAuth';
-// import Menu from './components/waitress/Menu';
+import Provider from './context/Provider';
 
 const App = () => {
 	const { user } = useContext(UserContext);
@@ -37,8 +37,10 @@ const App = () => {
 					path='/waitress'
 					element={
 						<ProtectedRoutes>
-							<Navbar />
-							<Waitress />
+							<Provider>
+								<Navbar />
+								<Waitress />
+							</Provider>
 						</ProtectedRoutes>
 					}
 				/>
