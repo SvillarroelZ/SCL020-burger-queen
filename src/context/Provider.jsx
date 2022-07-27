@@ -1,25 +1,47 @@
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
+// import menudataJson from '../menudata.json';
 
 export const AppContext = createContext();
-
 const Provider = (props) => {
+	// const data = menudataJson.menuOptions;
 	
-	const comanda = () => {
-		console.log('peo');
-		console.log(item.name);
+	// const [state, setState]= useState({ 
+	// 	menuList: data,
+	// 	cart: []
+	// });
+	
+	
+	const comanda = (id, name, price) => {
 		
+		// console.log(id);
+		// console.log(name);
+		// console.log(price)
+
+		const idComanda = id
+		const nameComanda = name
+		const priceComanda = price
+		//console.log(idComanda)
+
+		
+		const namePrice = idComanda === id ? `${nameComanda} ${priceComanda}` : null
+		console.log(namePrice);
+
+		// return (
+		// 	<>
+		// 		<p>${priceComanda}</p>
+		// 		<p>${nameComanda}</p>
+		// 		<p>${idComanda}</p>
+		// 	</>
+		// )
+
 	};
 
-	const sum = { comanda };
+			// const valores = {state, comanda} 
 
 	return (
 		<>
-			<AppContext.Provider value={sum}>
+			<AppContext.Provider value={comanda}>
 				{props.children}
-				{/* <div>
-					<p className='title-items'>{item.name}</p>
-					<h2 className='mx-5'>${item.price}</h2>
-				</div> */}
 			</AppContext.Provider>
 		</>
 	);

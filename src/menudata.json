@@ -55,7 +55,7 @@
                 },
                 {
                     "id":"07",
-                    "name":"Kat milkshake",
+                    "name":"Kat Milkshake",
                     "description":"Puedes elegir entre oreo, rainbow o dulce de leche",
                     "type":"drink",
                     "price": 2500,

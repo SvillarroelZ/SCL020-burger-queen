@@ -1,14 +1,35 @@
-import { useState, useContext } from 'react';
-import { addDoc, collection } from '../../firebase/init';
-import { db } from '../../firebase/init';
-// import { MenuContext } from './Productos';
+import { useContext } from 'react';
+import { AppContext } from '../../context/Provider';
 
 //cart
 export const Pedido = () => {
 
-	// const context = useContext(MenuContext);
+	const context = useContext(AppContext);
+
+	// const cartProduct = context.state.cart;
+
+	// console.log(cartProduct);
+
+
 	
-	// const carritoProductos = context.comanda.carrito;
+	
+	return (
+		<>
+		</>	
+	
+	)
+}
+
+export default Pedido;
+
+
+
+
+
+
+
+
+
 
 	// const totalCart = carritoProductos.reduce((total, producto) => 
 	// (total = total + producto.price * producto.count), 0 )
@@ -50,12 +71,3 @@ export const Pedido = () => {
 	// 	const hidden = () => {
 	// 		alert('Pedido realizado con éxito');
 	// 	}	
-	
-	
-	return (
-		<></>	
-	
-	)
-}
-
-export default Pedido;
