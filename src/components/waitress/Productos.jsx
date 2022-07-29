@@ -1,22 +1,23 @@
-// import { useState } from 'react';
-// import { createContext } from 'react';
-// import menudataJson from '../../menudata.json';
-// import { Pedido } from './Pedido';
+import { useState } from 'react';
+//import { createContext } from 'react';
+import menudataJson from '../../menudata.json';
+//import { Pedido } from './Pedido';
 
 
+const Productos = (props) => {
+    //console.log(props)
+
+    //const context = useContext(MenuContext);
+    // const data = useContext();
+    const data = menudataJson.menuOptions;
+    // const context = useContext(MenuContext)
 
 
-// const Productos = (props) => {
-//     //console.log(props)
-
-//     //const context = useContext(MenuContext);
-//     // const data = useContext();
-//     const data = menudataJson.menuOptions;
-//     // const context = useContext(MenuContext)
 //     const [comanda, setComanda] = useState({ //este es su state/setState de Order
 // 		menuList: data,
 // 		carrito: []
 // 	});
+ }
 
 // 	const agregar = (producto) => {
 // 		return setComanda({
