@@ -1,21 +1,34 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/Provider';
+import { useNavigate } from 'react-router-dom';
 
 //cart
 export const Pedido = () => {
 
 	const context = useContext(AppContext);
+	// const navegate = useNavigate();
 
-	// const cartProduct = context.state.cart;
+	
 
-	// console.log(cartProduct);
+	const cartProduct = context.cart;
 
+	console.log(cartProduct);
 
+	// const sendCart = () => {
+	// 	navegate('/chef');
+	// }
 	
 	
 	return (
-		<>
-		</>	
+		<div className="flex flex-col items-start bg-indigo-300 p-5 mx-12 rounded-lg">
+			{cartProduct.map((item, index) => (
+				<div key={index} className="flex w-56" >
+					<p className="mx-5">{item.count}</p>				
+					<p>{item.name}</p>
+				</div>
+			))}
+			{/* <button onClick={sendCart} >Enviar Comanda</button> */}
+		</div>	
 	
 	)
 }
