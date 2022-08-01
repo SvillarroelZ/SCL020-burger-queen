@@ -16,7 +16,7 @@ const Waitress = () => {
 					<Menu data={data} />
 					<Sizes />
 				</div>
-				<Pedido />
+				<Pedido/>
 			</div>
 		</main>
 	);
