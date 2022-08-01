@@ -21,7 +21,7 @@ const Menu = () => {
 
 	//const itemComanda = data.find(item => item.id == id)
 	return (
-			<div className='flex flex-col justify-between items-center bg-white-300'>
+			<div className='flex flex-col justify-between items-center bg-white-300 overflow-hidden'>
 				<div className='flex flex-col'>
 					<div className='flex flex-row'>
 						{/* <input id="displace" type="range" value="10" min="0" max="5" onInput="this.nextElementSibling.value = this.value"/> */}

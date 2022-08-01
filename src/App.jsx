@@ -28,8 +28,10 @@ const App = () => {
 					path='/chef'
 					element={
 						<ProtectedRoutes>
-							<Navbar />
-							<Chef />
+							<Provider>
+								<Navbar />
+								<Chef />
+							</Provider>
 						</ProtectedRoutes>
 					}
 				/>
