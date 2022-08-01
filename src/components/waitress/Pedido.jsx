@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/Provider';
 import { useNavigate } from 'react-router-dom';
-import { FaPlusCircle } from 'react-icons/fa';
-import { FaMinusCircle } from 'react-icons/fa';
+import { FaPlusCircle, FaTrashAlt, FaMinusCircle  } from 'react-icons/fa';
+
 
 //cart
 export const Pedido = () => {
@@ -25,13 +25,18 @@ export const Pedido = () => {
 	return (
 		<div className="flex flex-col items-start bg-indigo-300 p-5 mx-12 rounded-lg">
 			{cartProduct.map((item, index) => (
-				
-				<div key={index} className="flex w-56" >
-					{console.log(item)}
-					<button className='w-1 '><FaMinusCircle /></button>
-					<p className="mx-5 my-5">{item.count}</p>
-					<button className='w-1'><FaPlusCircle /></button>
-					<p className="mx-5 my-5" >{item.name}</p>
+				<div key={index}>
+					<div className="flex w-56" >
+						{console.log(item)}
+						<button onClick={() => context.decrement(item)} className='w-1'><FaMinusCircle /></button>
+						<p className="mx-5 my-5">{item.count}</p>
+						<button onClick={() => context.increment(item)} className='w-1'><FaPlusCircle /></button>
+						<p className="mx-5 my-5" >{item.name}</p>
+						<button onClick={()=> context.deleteProduct(item)}><FaTrashAlt/></button>
+					</div>
+					<div>
+						<p className="mx-5 my-5" >Total: ${item.totalPrice}</p>
+					</div>
 				</div>
 			))}
 			{/* <button onClick={sendCart} >Enviar Comanda</button> */}

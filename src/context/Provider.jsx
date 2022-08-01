@@ -29,17 +29,52 @@ const Provider = (props) => {
 			setCart(productList)
 		} 
 		else {
-			const newCart = [...cart]
-
-			
-			setCart(newCart)
+			console.log("Error")
 		}
 	};
 
+	const increment = (product) => {
+		const newCart = [...cart]
+		const searchProduct = cart.findIndex(item => item.id === product.id);
+
+		newCart[searchProduct].count += 1;
+		newCart[searchProduct].totalPrice =  newCart[searchProduct].count * newCart[searchProduct].price;
+
+		setCart(newCart)
+	}	
+
+	const decrement = (product) => {
+		const newCart = [...cart]
+		const searchProduct = cart.findIndex(item => item.id === product.id);
+
+	
+		if(newCart[searchProduct].count >= 2){
+			newCart[searchProduct].count -= 1;
+		}
+
+
+		newCart[searchProduct].totalPrice =  newCart[searchProduct].count * newCart[searchProduct].price;
+
+		setCart(newCart)
+	}	
+
+	const deleteProduct= (product) => {
+		const newCart= [...cart]
+		let searchProduct = cart.findIndex(item => item.id === product.id);
+
+		if(newCart[searchProduct].count) {
+			newCart[searchProduct].count = 0;
+		}
+
+	// 	if (searchProduct) {
+	// 		return { ...cart, count: cart.count - 1 }
+	// 	} else return console.log("oa no se restar")
+	// }
+	}
 
 
 	
-	const valores = {cart, comanda, data} 
+	const valores = {cart, comanda, data, increment, decrement, deleteProduct} 
 
 	return (
 		<>
@@ -50,41 +85,3 @@ const Provider = (props) => {
 	);
 };
 export default Provider;
-
-
-
-
-
-
-		// setState({
-		// 		...state,
-
-		// 		cart: state.cart.find((elem) => elem.id === product.id)
-		// 		? 
-		// 		state.cart.push(product.name, product.price) : console.log("no funcion :c")
-		// })
-
-		// console.log(id);
-		// console.log(name);
-		// console.log(price)
-
-		// const idComanda = id
-		// const nameComanda = name
-		// const priceComanda = price
-		//
-		// const itemComanda = data.find(item => item.id == id)
-		// //console.log(itemComanda)
-
-		// const newCart = state.cart.push(name, price)
-		// console.log(newCart)
-
-		//const namePrice = idComanda === id ? `${nameComanda} ${priceComanda}` : null
-		//console.log(namePrice);
-
-		// return (
-		// 	<>
-		// 		<p>${priceComanda}</p>
-		// 		<p>${nameComanda}</p>
-		// 		<p>${idComanda}</p>
-		// 	</>
-		// )
