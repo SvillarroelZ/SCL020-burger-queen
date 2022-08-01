@@ -1,17 +1,20 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/Provider';
 import { useNavigate } from 'react-router-dom';
+import { FaPlusCircle } from 'react-icons/fa';
+import { FaMinusCircle } from 'react-icons/fa';
 
 //cart
 export const Pedido = () => {
 
+	// const [pedido, setPedido] = useState(1);
 	const context = useContext(AppContext);
-	// const navegate = useNavigate();
-
 	
 
-	const cartProduct = context.cart;
+	// newCart[searchProduct].count += 1;
+	// newCart[searchProduct].totalPrice =  newCart[searchProduct].count * newCart[searchProduct].price;
 
+	const cartProduct = context.cart;
 	console.log(cartProduct);
 
 	// const sendCart = () => {
@@ -22,9 +25,13 @@ export const Pedido = () => {
 	return (
 		<div className="flex flex-col items-start bg-indigo-300 p-5 mx-12 rounded-lg">
 			{cartProduct.map((item, index) => (
+				
 				<div key={index} className="flex w-56" >
-					<p className="mx-5">{item.count}</p>				
-					<p>{item.name}</p>
+					{console.log(item)}
+					<button className='w-1 '><FaMinusCircle /></button>
+					<p className="mx-5 my-5">{item.count}</p>
+					<button className='w-1'><FaPlusCircle /></button>
+					<p className="mx-5 my-5" >{item.name}</p>
 				</div>
 			))}
 			{/* <button onClick={sendCart} >Enviar Comanda</button> */}
@@ -36,7 +43,7 @@ export const Pedido = () => {
 export default Pedido;
 
 
-
+// class="fi fi-br-minus-small"
 
 
 

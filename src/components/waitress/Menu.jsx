@@ -53,7 +53,7 @@ const Menu = () => {
 								key={index}
 								className='my-3 flex flex-row rounded-lg'
 							>
-								<img className='w-24' src={item.img} alt='' />
+								<img className='w-24' src={item.img} alt='food-img' />
 								<p className='title-items'>{item.name}</p>
 								<h2 className='mx-5'>${item.price}</h2>
 							</button>
