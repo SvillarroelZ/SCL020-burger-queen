@@ -7,7 +7,7 @@ const Provider = (props) => {
 	
 	const data = menudataJson.menuOptions;
 
-	const [cart, setCart]= useState([]);
+	const [cart, setCart]= useState([])
 	// const [cartChef, setCartChef]= useState([]);
 
 	
@@ -31,8 +31,7 @@ const Provider = (props) => {
 		else {
 			const newCart = [...cart]
 
-			newCart[searchProduct].count += 1;
-			newCart[searchProduct].totalPrice =  newCart[searchProduct].count * newCart[searchProduct].price;
+			
 			setCart(newCart)
 		}
 	};
