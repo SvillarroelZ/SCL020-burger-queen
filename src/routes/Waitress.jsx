@@ -11,12 +11,15 @@ const Waitress = () => {
 
 	return (
 		<main className='flex justify-center items-start w-screen h-screen'>
-			<div className='flex justify-around items-center w-52'>
+			<div className='flex justify-around items-center'>
 				<div className='flex justify-start items-center flex-col'>
 					<Menu data={data} />
 					<Sizes />
 				</div>
-				<Pedido/>
+				<div >
+					<Pedido/>
+				</div>
+				
 			</div>
 		</main>
 	);

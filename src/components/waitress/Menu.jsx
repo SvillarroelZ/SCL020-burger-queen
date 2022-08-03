@@ -21,11 +21,11 @@ const Menu = () => {
 
 	//const itemComanda = data.find(item => item.id == id)
 	return (
-			<div className='flex flex-col justify-between items-center bg-white-300 overflow-hidden'>
-				<div className='flex flex-col'>
-					<div className='flex flex-row'>
+			<div className='flex flex-col justify-between items-center bg-white-300 h-96'>
+				<div>
+					<div>
 						{/* <input id="displace" type="range" value="10" min="0" max="5" onInput="this.nextElementSibling.value = this.value"/> */}
-						<ul className='flex items-center w-64 gap-1.5'>
+						<ul className='flex items-center w-64  gap-1.5 '>
 							<button
 								className='h-9 w-20 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white '
 								onClick={() => menuType('drink')}

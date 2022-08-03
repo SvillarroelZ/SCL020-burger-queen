@@ -30,17 +30,17 @@ export const Pedido = () => {
     
     
     return (
-        <div className="flex flex-col items-start bg-indigo-300 p-5 mx-12 rounded-lg max-h-96">
-            {cartProduct.map((item, index) => (
-                <div key={index}>
-                    <div >
-                        <div className="flex w-56" >
+        <div className="flex flex-col items-start bg-indigo-300 p-5 mx-12 rounded-lg  max-h-96 overflow-x-hidden ">
+            {cartProduct.map((item, id) => (
+                <div key={id}>
+                    <div className="flex">
+                        <div className= 'flex w-26'>
                         {/* {console.log(item)} */}
                             <button onClick={() => context.decrement(item)} className='w-1'><FaMinusCircle/></button>
                             <p className="mx-5 my-5">{item.count}</p>
                             <button onClick={() => context.increment(item)} className='w-1'><FaPlusCircle/></button>
                             <p className="mx-5 my-5">{item.name}</p>
-                            <button className='flex items-end'onClick={()=> context.deleteProduct(item)}><FaTrashAlt/></button>
+                            <button className='flex items-center justify-end 'onClick={()=> context.deleteProduct(item)}><FaTrashAlt/></button>
                         </div>
                     </div>
                 </div>

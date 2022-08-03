@@ -18,15 +18,6 @@
                     "menu":"day"
                 },
                 {
-                    "id":"03",
-                    "name":"Helado soft",
-                    "description":"Helado soft de leche de almendras, pregunta por los sabores disponibles",
-                    "type":"food",
-                    "price": 1400,
-                    "img":"https://cdn-icons-png.flaticon.com/512/4062/4062559.png",
-                    "menu":"day"
-                },
-                {
                     "id":"04",
                     "name":"Ramen vegetariano",
                     "description":"Delicioso caldo de miso con fideos de soba huevo cocido marinado en nuestra famosa salsa secreta",
