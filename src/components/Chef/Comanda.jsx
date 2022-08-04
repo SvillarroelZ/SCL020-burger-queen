@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/Provider';
 
-const Comanda = () => {
+const Order = () => {
     const context = useContext(AppContext);
 
     const cartChef = context.cart;
@@ -21,4 +21,4 @@ const Comanda = () => {
     )
 }
 
-export default Comanda;
+export default Order;

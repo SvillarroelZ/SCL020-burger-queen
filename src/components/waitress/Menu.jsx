@@ -50,7 +50,7 @@ const Menu = () => {
 				<div className='w-64 h-84'>
 					{Menu.map((item, id) => (
 						<button
-							onClick={() => context.comanda(item)}
+							onClick={() => context.order(item)}
 							key={id}
 							className='my-3 p-5 w-56 h-20 flex flex-row justify-center align-middle mr-12 rounded-lg'
 						>

@@ -1,7 +1,7 @@
 import { UserContext } from '../context/UserProvider';
 // import { MenuContext } from '../components/waitress/Pedido';
 import Cronometro from '../components/Chef/Cronometro';
-import Comanda from '../components/Chef/Comanda';
+import Order from '../components/Chef/Comanda';
 import Botones from '../components/Chef/Botones';
 import axios from 'axios';
 import { useEffect } from 'react';
@@ -30,7 +30,7 @@ const Chef = () => {
 					<h3 className='text-2xl'>Chef: Juan Hernandez</h3>
 					<div className='flex flex-col items-start bg-indigo-300 rounded-lg'>
 						<Cronometro />
-						<Comanda />
+						<Order />
 						<Botones />
 					</div>
 				</div>
