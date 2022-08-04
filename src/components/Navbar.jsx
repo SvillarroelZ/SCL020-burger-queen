@@ -27,12 +27,20 @@ const Navbar = () => {
 	}, []);
 
 	const handlePanicBtn = () => {
-		Swal.fire('Alerta de emergencia');
+		Swal.fire({
+			tittle: '¿Deseas llamar al administrador?',
+			html: '¿Deseas llamar al administrador?',
+			icon: 'question',
+			showCancelButton: false,
+			showConfirmButton: true,
+			showCloseButton: true,
+			confirmButtonText: 'Si, Ayuda!',
+		});
 	};
 
 	const tables = () => {
-		navegate('/tables')
-	}
+		navegate('/tables');
+	};
 
 	return (
 		<div className='flex justify-center gap-20 shadow-xl text-white text-center'>
