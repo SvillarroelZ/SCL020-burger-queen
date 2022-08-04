@@ -28,7 +28,7 @@
                 },
                 {
                     "id":"05",
-                    "name":"Burrito de falafel",
+                    "name":"Shawarma falafel",
                     "description":"Relleno de lechuga tomates cherry falafel y nuestra salsa secreta",
                     "type":"food",
                     "price": 3800,
@@ -64,7 +64,7 @@
                 },
                 {
                     "id":"09",
-                    "name":"Sandwich de miga",
+                    "name":"Sandwich miga",
                     "description":"Sandwich relleno de crema de palmitos y not pollo de seitan",
                     "type":"food",
                     "price": 2500,

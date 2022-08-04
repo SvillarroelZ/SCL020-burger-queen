@@ -25,12 +25,16 @@ const Chef = () => {
 
 	return (
 		<>
-			<div>
-				<h3>Chef: Papitas</h3>
+			<div className='w-screen h-screen'>
+				<div className='w-1/3'>
+					<h3 className='text-2xl'>Chef: Juan Hernandez</h3>
+					<div className='flex flex-col items-start bg-indigo-300 rounded-lg'>
+						<Cronometro />
+						<Comanda />
+						<Botones />
+					</div>
+				</div>
 			</div>
-			<Cronometro />
-			<Comanda />
-			<Botones />
 		</>
 	);
 };
