@@ -6,37 +6,39 @@ const Tables = () => {
 	};
 	return (
 		<>
-			<div className='flex flex-col align-middle w-1/4 h-1/4 border-4 border-yellow-400 justify-center m-50 '>
-				<h1 className='text-3xl'>Tables</h1>
-				<div className='grid w-2/4 h-2/4 grid-cols-2 justify-center align-middle '>
-					<img
-						src='https://cdn-icons-png.flaticon.com/512/6976/6976248.png'
-						alt='mesa-3'
-						//className='flex w-24 h-24'
-					/>
-					<img
-						src='https://cdn-icons-png.flaticon.com/512/6976/6976248.png'
-						alt='mesa-3'
-						//className='flex w-24 h-24'
-					/>
-					<img
-						src='https://cdn-icons-png.flaticon.com/512/6976/6976248.png'
-						alt='mesa-3'
-						//className='flex w-24 h-24'
-					/>
-					<img
-						src='https://cdn-icons-png.flaticon.com/512/6976/6976248.png'
-						alt='mesa-4'
-						//className='flex w-24 h-24'
-					/>
-				</div>
+			<div className='flex  w-screen h-screen justify-center content-center'>
+				<div className='flex flex-col w-1/4 h-auto content-center '>
+					<h1 className='text-3xl'>Tables</h1>
+					<div className=' grid w-8/12 h-8/12 gap-18 content-center grid-cols-2 '>
+						<img
+							src='https://cdn-icons-png.flaticon.com/512/6976/6976248.png'
+							alt='mesa-3'
+							className='flex w-8/12 h-8/12'
+						/>
+						<img
+							src='https://cdn-icons-png.flaticon.com/512/6976/6976248.png'
+							alt='mesa-3'
+							className='flex w-8/12 h-8/12'
+						/>
+						<img
+							src='https://cdn-icons-png.flaticon.com/512/6976/6976248.png'
+							alt='mesa-3'
+							className='flex w-8/12 h-8/12'
+						/>
+						<img
+							src='https://cdn-icons-png.flaticon.com/512/6976/6976248.png'
+							alt='mesa-4'
+							className='flex w-8/12 h-8/12'
+						/>
+					</div>
 
-				<button
-					onClick={goBack}
-					className='h-9 w-28 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white text-white'
-				>
-					Back
-				</button>
+					<button
+						onClick={goBack}
+						className='h-9 w-28 bg-purple-400 my-1 rounded-lg border-none shadow-xl border-white text-white'
+					>
+						Back
+					</button>
+				</div>
 			</div>
 		</>
 	);
