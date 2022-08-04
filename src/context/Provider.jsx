@@ -11,7 +11,7 @@ const Provider = (props) => {
     const [cart, setCart]= useState([])
     // const [cartChef, setCartChef]= useState([]);
     
-    const comanda = (product) => {
+    const order = (product) => {
         // console.log(product)
         
         const searchProduct = cart.findIndex(item => item.id === product.id);
@@ -86,11 +86,12 @@ const Provider = (props) => {
         }
         catch (error) {
             console.error(error);         
-        }
+
+            }
     }
+order
 
-
-    const valores = {cart, comanda, data, increment, decrement, deleteProduct, setValue} 
+    const valores = {cart, order, data, increment, decrement, deleteProduct, setValue} 
     
 
     return (
