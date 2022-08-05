@@ -20,7 +20,7 @@ const Menu = () => {
 		}
 	};
 
-	//const itemComanda = data.find(item => item.id == id)
+
 	return (
 		<div className='flex flex-col justify-between items-center bg-white-300 h-96'>
 			<div>
@@ -59,10 +59,10 @@ const Menu = () => {
 								src={item.img}
 								alt='food-img'
 							/>
-							<p className='title-items w-1/3 justify-center align-middle m-2 '>
+							<p className='title-items w-1/3 justify-center align-middle m-2 text-base text-purple-900 '>
 								{item.name}
 							</p>
-							<h2 className='w-1/3 justify-end align-middle p-5 text-indigo-900'>
+							<h2 className='w-1/3 align-middle p-5text-base text-purple-900 '>
 								${item.price}
 							</h2>
 						</button>

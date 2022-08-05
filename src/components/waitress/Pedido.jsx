@@ -3,7 +3,7 @@ import { AppContext } from '../../context/Provider';
 import { useNavigate } from 'react-router-dom';
 import { FaPlusCircle, FaTrashAlt, FaMinusCircle } from 'react-icons/fa';
 
-//cart
+
 export const Pedido = () => {
 	// const [cart, setCart]= useState(context.cart);
 	const context = useContext(AppContext);
@@ -58,10 +58,10 @@ export const Pedido = () => {
 
 				{/* <button onClick={() => context.sendCart()}>Enviar Comanda</button> */}
 			</div>
-			<p>Precio total: ${totalPrice()}</p>
+			<p className= 'text-lg text-purple-900 '>Precio total: ${totalPrice()}</p>
 			<button
-				className='bg-indigo-300 w-40 h-12 rounded-lg border-2 border-white shadow-xl'
-				onClick={() => [context.handlePostOrder(cartProduct)]}
+				className='bg-purple-500 w-40 h-12 rounded-lg border-2 text-white border-white shadow-xl'
+				onClick={() => [context.setValue(cartProduct)]}
 			>
 				Enviar Comanda
 			</button>
@@ -71,44 +71,3 @@ export const Pedido = () => {
 
 export default Pedido;
 
-// class="fi fi-br-minus-small"
-
-// const totalCart = carritoProductos.reduce((total, producto) =>
-// (total = total + producto.price * producto.count), 0 )
-
-// const totalCount = context.state.cart.reduce((total, producto) =>
-// (total = total + producto.count), 0)
-
-// const [ waiter, setWaiter ] = useState(''); //*
-// const [ table, setTable ] = useState('');
-
-// const getDate = () => {
-//  const currentDate = new Date();
-//  const date = `${currentDate.getDate()} - ${(currentDate.getMonth() + 1)} - ${currentDate.getFullYear()}`;
-//  const time = `${currentDate.getHours()}:${currentDate.getMinutes()}`;
-//  const dateTime = `${date} - ${time}`;
-//  return dateTime;
-// }
-
-// const addData = async (e) => {
-//  e.preventDefault();
-//  try {
-//      const doc = await addDoc(collection, (db, 'pedidos'), {
-//          name: waiter || null,
-//          table: table || null,
-//          order: carritoProductos || null,
-//          total: totalCart || null,
-//          time: getDate(),
-//          status:'pending'
-//      });
-//      console.log('Documento agregado por id: ', docRef.id);
-//  } catch (error) {
-//      console.log('Error añadiendo documento: ', error);
-//  }
-//  setWaiter('');
-//  setTable('');
-//  context.removeAll();
-// }
-//  const hidden = () => {
-//      alert('Pedido realizado con éxito');
-//  }
