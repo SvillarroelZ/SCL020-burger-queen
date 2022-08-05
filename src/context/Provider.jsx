@@ -1,6 +1,7 @@
 import { createContext, useState } from 'react';
 import Swal from 'sweetalert2';
 import menudataJson from '../menudata.json';
+import axios from 'axios';
 
 export const AppContext = createContext();
 
@@ -58,8 +59,6 @@ const Provider = (props) => {
         setCart(newCart)
     }   
 
-
-
     const deleteProduct = (product) => {
         const inCart = cart.find(
             (productInCart) => productInCart.id === product.id
@@ -78,20 +77,54 @@ const Provider = (props) => {
         }
     };
 
-    const setValue = cart => {
-        try {
-            setCart(cart) 
-            window.localStorage.setItem('storedCart', JSON.stringify(cart));
+    // const setValue = cart => {
+    //     try {
+    //         setCart(cart) 
+    //         window.localStorage.setItem('storedCart', JSON.stringify(cart));
             
-        }
-        catch (error) {
-            console.error(error);         
+    //     }
+    //     catch (error) {
+    //         console.error(error);         
 
-            }
+    //         }
+    // }
+    const bodyProductsDB = (info) =>{
+        let arrayProduct = []
+        for(let i = 0; i < info.length; i++){
+    arrayProduct.push({
+        qty: info[i].count,
+        product: info[i].name,
+        price: info[i].price  
+    })
     }
-order
+    console.log(info);
+    return arrayProduct
+}
+bodyProductsDB(cart);
 
-    const valores = {cart, order, data, increment, decrement, deleteProduct, setValue} 
+    const handlePostOrder = (cart) => {
+        // e.preventDefault();
+        // console.log(bodyProductsDB(cart))
+        // 
+        let headers = {
+            Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+                
+        const body =   {client: "katqueen",
+        products : bodyProductsDB(cart)
+        }
+        console.log(headers)
+        axios
+        .post('https://apiburgerqueenv1.herokuapp.com/orders',  body, { headers })  
+        .then((response) => {
+            console.log("orderrr---------->", response.data)
+        }) 
+        .catch((err) => console.log(err));
+    } 
+
+
+
+    const valores = {cart, order, data, increment, decrement, deleteProduct, bodyProductsDB, handlePostOrder} 
     
 
     return (
@@ -103,3 +136,15 @@ order
     );
 };
 export default Provider;
+
+
+// [{
+//     qty: 6,
+//     product: bodyProductsDB,
+//     price: 5000
+//     },
+//     {
+//     qty: 1,
+//     product: "patatas fritas",
+//     price: 2000
+//     }]
