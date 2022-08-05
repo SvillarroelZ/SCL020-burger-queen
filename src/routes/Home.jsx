@@ -10,7 +10,7 @@ import axios from 'axios';
 //import { useForm } from 'react-hook-form';
 
 const Home = () => {
-	const [email, setEmail] = useState('chef@katqueen.com');
+	const [email, setEmail] = useState('waitress@katqueen.com');
 	const [password, setPassword] = useState('123123');
 	const navegate = useNavigate();
 	const [user, setUser] = useState({

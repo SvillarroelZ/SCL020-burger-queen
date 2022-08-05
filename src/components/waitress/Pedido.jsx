@@ -61,7 +61,7 @@ export const Pedido = () => {
 			<p>Precio total: ${totalPrice()}</p>
 			<button
 				className='bg-indigo-300 w-40 h-12 rounded-lg border-2 border-white shadow-xl'
-				onClick={() => context.setValue(cartProduct)}
+				onClick={() => [context.handlePostOrder(cartProduct)]}
 			>
 				Enviar Comanda
 			</button>
